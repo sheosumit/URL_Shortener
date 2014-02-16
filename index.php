@@ -117,13 +117,13 @@ table {
   <input type="submit" name="Submit" value="Shorten" />
 </form>
 
-<!--if form was just posted-->
+
 <?php if (!empty($_GET['s'])) { ?>
 <br />
-<h2>Shortened URL: <a href="<?php echo $server_name; ?><?php include('Database_Connect.php');  $r=mysql_query("SELECT short_url FROM url_table WHERE short_url = '".$_GET['s']."'") ; 
+<h2>Shortened URL: <a href="<?php include('Database_Connect.php');  $r=mysql_query("SELECT full_url FROM url_table WHERE short_url = '".$_GET['s']."'") ; 
 
 while ($row = mysql_fetch_array($r, MYSQL_ASSOC)) {
-    echo $row['short_url']; } ?>" target="_blank"><?php echo $server_name; ?><?php include('Database_Connect.php');  $r=mysql_query("SELECT short_url FROM url_table WHERE short_url = '".$_GET['s']."'") ; 
+    echo $row['full_url']; } ?>" target="_blank"><?php echo $server_name; ?><?php include('Database_Connect.php');  $r=mysql_query("SELECT short_url FROM url_table WHERE short_url = '".$_GET['s']."'") ; 
 
 while ($row = mysql_fetch_array($r, MYSQL_ASSOC)) {
     echo $row['short_url'];} ?></a></h2>
