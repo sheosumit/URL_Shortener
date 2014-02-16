@@ -1,6 +1,6 @@
 <?php
 
-//mysql db connection information
+
 $hostname = "localhost"; //host
 $database = "urls";
 $username = "root"; 
@@ -21,6 +21,6 @@ mysql_query("CREATE TABLE IF NOT EXISTS `url_table` (
   
   PRIMARY KEY  (`url_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;");
-//
+
 
 ?>
